@@ -1,0 +1,122 @@
+body, div, dl, dt, dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote，th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;display: block;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal;}
+li{list-style: none;}
+capation,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before, q:after{content:' '}
+abbr,acronym{border:0;}
+a{text-decoration: none;-webkit-tap-highlight-color: transparent;}
+i{font-style: normal;}
+.unl{text-decoration:underline;}
+.no_unl{text-decoration:none;}
+
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin-left:auto;margin-right:auto;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
+/*.clearfix{display:inline-block;}*/
+*html .clearfix{height:1%}
+.vm{vertical-align:center;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.abs-right{position:absolute;right:0;}
+.zoom{zoom:1}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+.reset{padding: 0 !important;margin:0 !important;}
+
+body{
+	color: #333;
+	background: #fff!important;
+}
+
+@w:50;
+@mainColor:#3072F6;
+@grayColor:#C5C5CC;
+.width(@val){
+    width:(@val/@w);
+}
+.widthImt(@val){
+    width:(@val/@w) !important;
+}
+.height(@val){
+    height:(@val/@w);
+}
+.lineHeight(@val){
+    line-height:(@val/@w);
+}
+.fontSize(@val){
+    font-Size:(@val/@w);
+}
+
+.padding(@a,@b,@c,@d){
+    padding: @a/@w @b/@w @c/@w @d/@w;
+}
+.margin(@a,@b,@c,@d){
+    margin: @a/@w @b/@w @c/@w @d/@w;
+}
+
+.border-bottom-half(){
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 2rem / @w;
+		background: #999;
+		transform: scaleY(.2);
+		z-index: 1;
+
+		/*position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		!* 初始化边框 *!
+		content: '';
+		box-sizing: border-box;
+		height: 1px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		!* 以上代码，实现了一个边框为1px的元素，下面实现0.5px边框*!
+		transform: scaleY(0.5); // 元素Y方向缩小为原来的0.5
+		transform-origin: 0 0; // CSS属性让你更改一个元素变形的原点。*/
+	}
+}
+
+.yd-datetime-placeholder{
+	color: @grayColor !important;
+}
+
+.yd-popup{
+	background: transparent !important;
+}
+.yd-actionsheet-item,.yd-actionsheet-action{
+	height: 80rem/@w !important;
+	line-height:80rem/@w !important;
+	font-size: 28rem/@w !important;
+}
+.yd-cityselect-title{
+	font-size: 28rem/@w !important;
+	color: #333;
+}
+
+.lsf-list-box .list-left{
+  .yd-checkbox{
+    display: flex;
+    align-items: center;
+    .yd-checkbox-icon{
+      margin-right: 16rem/@w;
+      .height(50rem) !important;
+      .width(50rem) !important;
+    }
+  }
+}
